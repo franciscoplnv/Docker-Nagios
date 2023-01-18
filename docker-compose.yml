@@ -22,9 +22,9 @@ services:
     ports:
       - "8080:80"
     environment:
-      - NAGIOS_TIMEZONE=Europe/Madrid
-    #  - MAIL_RELAY_HOST=backup.lonunavisto.com
-      - NAGIOS_FQDN=backup.lonuncavisto.com
+    #  - NAGIOS_TIMEZONE=Europe/Madrid
+    #  - MAIL_RELAY_HOST=test.domain.com
+    #  - NAGIOS_FQDN=test.domain.com
     #  - MAIL_INET_PROTOCOLS=
     restart: always
 
