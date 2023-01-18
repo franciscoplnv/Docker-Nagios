@@ -9,13 +9,24 @@
 version: '3'
 services:
   nagios:
-    image: jasonrivers/nagios:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #image: francisco
     volumes:
     - nagiosetc:/opt/nagios/etc
     - nagiosvar:/opt/nagios/var
     - customplugins:/opt/Custom-Nagios-Plugins
     - nagiosgraphvar:/opt/nagiosgraph/var
     - nagiosgraphetc:/opt/nagiosgraph/etc
+    ports:
+      - "8080:80"
+    environment:
+      - NAGIOS_TIMEZONE=Europe/Madrid
+    #  - MAIL_RELAY_HOST=backup.lonunavisto.com
+      - NAGIOS_FQDN=backup.lonuncavisto.com
+    #  - MAIL_INET_PROTOCOLS=
+    restart: always
 
 volumes:
     nagiosetc:

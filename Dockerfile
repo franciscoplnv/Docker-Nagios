@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-MAINTAINER Jason Rivers <jason@jasonrivers.co.uk>
+LABEL Francisco Piedras  <francsico.piedras83@gmail.com>
 
 ENV NAGIOS_HOME            /opt/nagios
 ENV NAGIOS_USER            nagios
